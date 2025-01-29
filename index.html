@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIG THE DATA 3.0</title>
+    <link rel="icon" href="ncc.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <style>
+        body, nav a, section, .logo-container span, h2, p, label, ul, li {
+            color: white;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: rgba(51, 51, 51, 0.182); /* 80% transparent */
+            overflow: hidden;
+        }
+        nav a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 20px 16px; /* Increased padding to increase height */
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color:linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
+            color: black;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color:  linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
+            margin: 0;
+        }
+        table div{
+            background: #dddddd1e; padding: 20px; margin: 10px; border-radius: 10px; height: 100px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .logo-container img {
+            height: 65px;
+            margin-right: 10px;
+        }
+        .logo-container span {
+            font-size: 1.5em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .register-button {
+            background: linear-gradient(to right, blue, purple, red);
+            color: white;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 1em;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .register-button:hover {
+            transform: scale(1.1);
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .owl-nav button {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#details">Event Details</a>
+            <a href="#registration">Registration</a>
+            <a href="#roadmap">Event Roadmap</a>
+            <a href="#dtd">DTD</a>
+            
+        </nav>
+    </header>
+    <header>
+        <div class="logo-container">
+            <img src="ncc.png" alt="NCC Logo">
+            <span>NITER COMPUTER CLUB PRESENT</span>
+        </div>
+    </header>
+
+    <section id="details" style="background: #dddddd1e; padding: 40px; margin: 40px;">
+        <div>
+            <table>
+                <tr>
+                    <td style="width: 500px; padding-right: 100px;"><img src="ncc.png" alt="NCC Logo" style="width:200px;height:auto;"></td>
+                    <td style="text-align: center;">
+                        <h2>Event Details</h2>
+                        <p>Date: December 10, 2023</p>
+                        <p>Time: 9:00 AM - 4:00 PM</p>
+                        <p>Location: ABC Convention Center, 123 Main St, Cityville</p>
+                        <p>Description: Join us for a day of insightful sessions, networking opportunities, and more.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="registration"><center>
+        <a href="reg.html" class="register-button">Register Now</a>
+        </center>
+    </section>
+    <section id="roadmap">
+        <center><h2>DIG THE DATA 3.0 Roadmap</h2></center>
+        <center>
+        <table>
+            <tr>
+            <td><div><center>Registration Opens <br><br> 01:00 PM <br><br> 1st February 2025</center></div></td>
+            <td><div><center>Registration Closed<br><br> 01:00 AM <br><br> 16th February 2025</center></div></td>
+            <td><div><center>Preliminary Round<br><br> 04:00 PM <br><br> 17th February 2025</center></div></td>
+            <td><div><center>Finalist Announcement<br><br> 09:00 PM <br><br> 18th February 2025</center></div></td>
+            <td><div><center>Final Round<br><br> 02:00 PM <br><br> 19th February 2025</center></div></td>
+            <td><div><center>NCC Oriantation & DTD 3.0 Prize Giving<br><br> 02:00 PM <br><br> 25th February 2025</center></div></td>
+            </tr>
+        </table>
+    </center>
+        </section>
+
+        <section id="dtd" style="background: #dddddd1e; padding: 40px; margin: 40px;">  
+            <center><h2>About Dig the data 3.0</h2></center>
+            <p>Organized by NCC(NITER Computer Club), It is an exclusive event for the NITER 14th batch. This time, we will bring the event to you with a twist unlike never seen before. Get ready and put your thinking caps on as we want the best performance out of you. 
+
+                The events will be covered in various stages. Details pore dibo. Demo question ta hok
+                </p>
+        </section>
+
+    <hr>
+
+    <section id="teaser" >
+    <center>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6lXEiXb05uA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+    </section>
+
+    <section id="gallery">
+        <center><h2>Few Moments of DIG THE DATA 2.0</h2></center>
+        
+        <div class="image-gallery owl-carousel">
+            <div><img src="p1.jpg" alt="Image 1"></div>
+            <div><img src="p2.jpg" alt="Image 2"></div>
+            <div><img src="p3.jpg" alt="Image 3"></div>
+            <div><img src="p4.jpg" alt="Image 4"></div>
+            <div><img src="p6.jpg" alt="Image 5"></div>
+            <div><img src="p7.jpg" alt="Image 6"></div>
+            <div><img src="p8.jpg" alt="Image 7"></div>
+            <div><img src="p9.jpg" alt="Image 8"></div>
+            
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 10,
+                nav: true,
+                navText: ["<", ">"],
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true
+            });
+        });
+    </script>
+
+    <section id="dtd" style="background: #dddddd1e; padding: 40px; margin: 40px;">  
+        <center><h2>What is DIG THE DATA?</h2></center>
+        <p>Dig The Data Is a treasure hunt event to display the creativity and critical thinkings of freshers. It's a fresher exclusive event where they perform in various stages and ultimately stand tall on the podium. In this event, freshers explore the whole campus looking for clues and solve problems while exploring various details about our lovely campus and get familiarised with it. The previous seasons displayed the enthusiasm and the energy it provides, creating a wonderful and everlasting memory.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of passionate individuals dedicated to organizing events that inspire and educate.</p>
+    </section>
+</body>
+</html>
