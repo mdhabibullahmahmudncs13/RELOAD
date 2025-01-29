@@ -9,161 +9,220 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <style>
-        body, nav a, section, .logo-container span, h2, p, label, ul, li {
-            color: white;
-        }
-    </style>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: rgba(51, 51, 51, 0.182); /* 80% transparent */
-            overflow: hidden;
-        }
-        nav a {
-            float: right;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 20px 16px; /* Increased padding to increase height */
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color:linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
-            color: black;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color:  linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
-            margin: 0;
-        }
-        table div{
-            background: #dddddd1e; padding: 20px; margin: 10px; border-radius: 10px; height: 100px;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .logo-container img {
-            height: 65px;
-            margin-right: 10px;
-        }
-        .logo-container span {
-            font-size: 1.5em;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        .register-button {
-            background: linear-gradient(to right, blue, purple, red);
-            color: white;
-            padding: 1em 2em;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 1.2em;
-            margin-top: 1em;
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-        .register-button:hover {
-            transform: scale(1.1);
-        }
-
-        .owl-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        .owl-nav button {
-            background: none;
-            border: none;
-            font-size: 2em;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    
+   
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#details">Event Details</a>
-            <a href="#registration">Registration</a>
-            <a href="#roadmap">Event Roadmap</a>
-            <a href="#dtd">DTD</a>
+
+    <style>body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    nav {
+        background-color: rgba(51, 51, 51, 0.218);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        padding: 10px;
+    }
+    nav a {
+        padding: 10px 15px;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+        nav a {
+            padding: 10px;
+            display: block;
+            @media (max-width: 768px) {
+                nav {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                nav a {
+                    padding: 10px;
+                    display: block;
+                    text-align: none;
+                }
+            }
+        }
+    }
+    nav a:hover {
+        background-color:linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
+        color: black;
+    }
+    section {
+        margin: 20px;
+        padding: 20px;
+        background-color:  linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
+        margin: 0;
+    }
+    table div{
+        background: #dddddd1e; padding: 20px; margin: 10px; border-radius: 10px; height: 100px;
+    }
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .logo-container img {
+        height: 65px;
+        margin-right: 10px;
+    }
+    .logo-container span {
+        font-size: 1.5em;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .register-button {
+        background: linear-gradient(to right, blue, purple, red);
+        color: white;
+        padding: 1em 2em;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1.2em;
+        margin-top: 1em;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    .register-button:hover {
+        transform: scale(1.1);
+    }
+    
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+    }
+    .owl-nav button {
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    td {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+        table, tbody, tr, td {
+            display: block;
+            width: 100%;
+        }
+        td {
+            padding: 5px;
+        }
+    }
+
+    #teaser iframe {
+        width: 100%;
+        height: 70%; /* Full section height */
+    }
+    
+    
+
+    
+
+
+
+</style>
+<header>
+    <nav>
+        <a href="#details">Event Details</a>
+        <a href="#registration">Registration</a>
+        <a href="#roadmap">Event Roadmap</a>
+        <a href="#dtd">DTD</a>
+    </nav>
+    <div class="logo-container">
+        <img src="ncc.png" alt="NCC Logo">
+        <span>NITER COMPUTER CLUB PRESENT</span>
+    </div>
+</header>
+
+
+    <section id="details">
+       
+           
+                <div style="background: #dddddd1e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <center><img src="dtd.png" alt="Dig The Data 3.0"></center>
+                </div>
+
+                <section id="registration">
+                    <center>
+                        <a href="reg.html" class="register-button">Register Now</a>
+                    </center>
+                </section>
             
-        </nav>
-    </header>
-    <header>
-        <div class="logo-container">
-            <img src="ncc.png" alt="NCC Logo">
-            <span>NITER COMPUTER CLUB PRESENT</span>
-        </div>
-    </header>
-
-    <section id="details" style="background: #dddddd1e; padding: 40px; margin: 40px;">
-        <div>
-            <table>
-                <tr>
-                    <td style="width: 500px; padding-right: 100px;"><img src="ncc.png" alt="NCC Logo" style="width:200px;height:auto;"></td>
-                    <td style="text-align: center;">
-                        <div style="width: 600px; padding: 20px; height: 200px;">
-                            <h2>DIG THE DATA 3.0</h2>
-                            <p>Date: 18th February 2025</p>
-                            <p>Time: 2:00 AM - 5:00 PM</p>
-                            <p>Location: AD 202, Conference Room, NITER</p>
-                            <p>Push the boundaries and Step beyond convention.</p>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                    
+    <div style="background: #dddddd1e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+       <center>
+         <h2>DIG THE DATA 3.0</h2>
+        <p>Date: 18th February 2025</p>
+        <p>Time: 2:00 AM - 5:00 PM</p>
+        <p>Location: AD 202, Conference Room, NITER</p>
+        <p>Push the boundaries and Step beyond convention.</p>
+    </center>
+    </div>
+                    
+                 
+        
     </section>
 
-    <section id="registration"><center>
-        <a href="reg.html" class="register-button">Register Now</a>
-        </center>
-    </section>
+    
     <section id="roadmap">
         <center><h2>DIG THE DATA 3.0 Roadmap</h2></center>
-        <center>
-        <table>
+        <center><table class="roadmap">
             <tr>
-            <td><div><center>Registration Opens <br><br> 01:00 PM <br><br> 1st February 2025</center></div></td>
-            <td><div><center>Registration Closed<br><br> 01:00 AM <br><br> 16th February 2025</center></div></td>
-            <td><div><center>Preliminary Round<br><br> 04:00 PM <br><br> 17th February 2025</center></div></td>
-            <td><div><center>Finalist Announcement<br><br> 09:00 PM <br><br> 18th February 2025</center></div></td>
-            <td><div><center>Final Round<br><br> 02:00 PM <br><br> 19th February 2025</center></div></td>
-            <td><div><center>NCC Oriantation & DTD 3.0 Prize Giving<br><br> 02:00 PM <br><br> 25th February 2025</center></div></td>
+                <td><div><center>Registration Opens <br><br> 01:00 PM <br><br> 1st February 2025</center></div></td>
+                <td><div><center>Registration Closed<br><br> 01:00 AM <br><br> 16 February 2025</center></div></td>
+                <td><div><center>Preliminary Round<br><br> 04:00 PM <br><br> 17 February 2025</center></div></td>
+                <td><div><center>Finalist Announcement<br><br> 09:00 PM <br><br> 18 February 2025</center></div></td>
+                <td><div><center>Final Round<br><br> 02:00 PM <br><br> 19th February 2025</center></div></td>
+                <td><div><center>NCC Oriantation & DTD 3.0 Prize Giving<br><br> 02:00 PM <br><br> 25th February 2025</center></div></td>
             </tr>
         </table>
-    </center>
-        </section>
+        </center>
+    </section>
 
-        <section id="dtd" style="background: #dddddd1e; padding: 40px; margin: 40px; border-radius: 15px;">  
-            <center><h2>About Dig the data 3.0</h2></center>
-            <p>Organized by NCC(NITER Computer Club), It is an exclusive event for the NITER 14th batch. This time, we will bring the event to you with a twist unlike never seen before. Get ready and put your thinking caps on as we want the best performance out of you. 
-
-                The events will be covered in various stages.
-            </p>
-        </section>
+    
 
     <hr>
 
-    <section id="teaser" >
-    <center>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/6lXEiXb05uA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </center>
+    <section id="teaser">
+        <center>
+            <div style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden; max-width: 70%;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/6lXEiXb05uA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </center>
     </section>
 
     <section id="gallery">
@@ -185,32 +244,58 @@
     <script>
         $(document).ready(function(){
             $(".owl-carousel").owlCarousel({
-                items: 3,
+                items: 1, // Show 1 image per slide on small screens
                 loop: true,
                 margin: 10,
                 nav: true,
                 navText: ["<", ">"],
                 autoplay: true,
                 autoplayTimeout: 3000,
-                autoplayHoverPause: true
+                autoplayHoverPause: true,
+                responsive: {
+                    600: {
+                        items: 2 // Show 2 images per slide on tablets
+                    },
+                    1000: {
+                        items: 3 // Show 3 images per slide on desktops
+                    }
+                }
             });
         });
+        
     </script>
 
-    <section id="dtd" style="background: #dddddd1e; padding: 40px; margin: 40px;">  
-        <center><h2>What is DIG THE DATA?</h2></center>
-        <p>Dig The Data Is a treasure hunt event to display the creativity and critical thinkings of freshers. It's a fresher exclusive event where they perform in various stages and ultimately stand tall on the podium. In this event, freshers explore the whole campus looking for clues and solve problems while exploring various details about our lovely campus and get familiarised with it. The previous seasons displayed the enthusiasm and the energy it provides, creating a wonderful and everlasting memory.</p>
+    <section id="dtd">  
+
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="background: #dddddd1e; padding: 20px; border-radius: 10px; flex: 1;">
+                <center><h2>About Dig the data 3.0</h2></center>
+                <p>Organized by NCC(NITER Computer Club), It is an exclusive event for the NITER 14th batch. This time, we will bring the event to you with a twist unlike never seen before. Get ready and put your thinking caps on as we want the best performance out of you. 
+
+                    The events will be covered in various stages.
+                </p>
+            </div>
+
+            <div style="background: #dddddd1e; padding: 20px; border-radius: 10px; flex: 1;">
+                <center><h2>What is DIG THE DATA?</h2></center>
+                <p>Dig The Data Is a treasure hunt event to display the creativity and critical thinkings of freshers. It's a fresher exclusive event where they perform in various stages and ultimately stand tall on the podium. In this event, freshers explore the whole campus looking for clues and solve problems while exploring various details about our lovely campus and get familiarised with it. The previous seasons displayed the enthusiasm and the energy it provides, creating a wonderful and everlasting memory.</p>
+            </div>
+        </div>
+        
     </section>
 
     <footer id="about" style="background: #33333328; padding: 10px; text-align: center; color: white;">
         <p>Follow us on:</p>
         <div>
-            <a href="https://www.facebook.com/NiterComputerClub" target="_blank">
-                <img src="fb.png" alt="Facebook" style="width: 40px; height: 40px; margin-right: 10px;">
-            </a>
-            <a href="https://www.youtube.com/@NITERComputerClub" target="_blank">
-                <img src="yt.png" alt="YouTube" style="width: 40px; height: 40px;">
-            </a>
+        <center>
+        <a href="https://www.facebook.com/NiterComputerClub" target="_blank" style="display: inline-block;">
+            <img src="fb.png" alt="Facebook" style="width: 40px; height: 40px; margin-right: 10px;">
+        </a>
+        <a href="https://www.youtube.com/@NITERComputerClub" target="_blank" style="display: inline-block;">
+            <img src="yt.png" alt="YouTube" style="width: 40px; height: 40px;">
+        </a>
+    
+    </center>
         </div>
         <p>2025 &copy All Rights Reserved By NITER Computer Club - NCC</p>
     </footer>
