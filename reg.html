@@ -11,18 +11,20 @@
             padding: 0;
             background: linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
             color: #333;
-            overflow-y: scroll;
-            height: 100vh;
+            overflow-y: auto;
+            min-height: 100vh;
         }
         header {
             color: white;
             padding: 20px;
             text-align: center;
-            position: relative;
         }
         header h1 {
             font-size: 3em;
             font-family: 'Courier New', Courier, monospace;
+        }
+        #wait-message {
+            font-size: 1.2em;
         }
         .register-button {
             background-color: #e74c3c;
@@ -41,22 +43,18 @@
             background: linear-gradient(to right, #333, #4b0082, #800080, #7b68ee, #4682b4);
             color: white;
         }
-        .blue-section {
-            background-color: #2980b9;
-            color: white;
-        }
         .registration-form {
-            background-color: rgba(255, 255, 255, 0.047);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 20px;
             max-width: 700px;
             margin: 0 auto;
             text-align: center;
-            height: 100%;
+            color: white;
         }
         iframe {
             width: 100%;
-            height: 878px;
+            height: 850px;
             border: none;
         }
         @media (max-width: 768px) {
@@ -88,18 +86,19 @@
 <body>
     <header>
         <h1>DIG THE DATA 3.0</h1>   
-        <p id="wait-message">Wait few seconds....</p>
-        <script>
-            setTimeout(function() {
-            document.getElementById('wait-message').style.display = 'none';
-            }, 3000);
-        </script>
+        <p id="wait-message">Wait a few seconds...</p>
     </header>
     <section id="registration" class="green-section">
         <div class="registration-form">
             <h2>Register Now</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnVTKLNfUCtbHjVRuF1uwNHX2425DEqnI7EA1grZU4lA4gSw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnVTKLNfUCtbHjVRuF1uwNHX2425DEqnI7EA1grZU4lA4gSw/viewform?embedded=true">Loading…</iframe>
         </div>
     </section>
+    
+    <script>
+        setTimeout(function() {
+            document.getElementById('wait-message').style.display = 'none';
+        }, 3000);
+    </script>
 </body>
 </html>
